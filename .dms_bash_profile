@@ -1,6 +1,9 @@
-echo "this script is used to setup DMS Bash Profile"
-export JAVA_HOME=`echo $(/usr/libexec/java_home)`
-export PATH=$PATH:$JAVA_HOME/bin
-set
-echo "JAVA_HOME=$JAVA_HOME"
-echo "PATH=$PATH"
+#!/bin/bash
+
+echo "this script is used to launch  DMS Bash Profile"
+#export JAVA_HOME=`echo $(/usr/libexec/java_home)`
+#export PATH=$PATH:$JAVA_HOME/bin
+#set
+#echo "JAVA_HOME=$JAVA_HOME"
+#echo "PATH=$PATH"
+. ./dms_global.sh
