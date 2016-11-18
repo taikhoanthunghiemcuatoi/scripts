@@ -16,6 +16,5 @@ export DMS_CONFIG=$DMS_HOME/config
 export DMS_TEMP=$DMS_HOME/temp
 export DMS_SCRIPTS=$DMS_HOME/scripts
 export DMS_LOG=$DMS_TEMP/log
-export DMS_UPLOAD=$DMS_HOME/upload
+export DMS_FTP=$DMS_HOME/ftp
 export DMS_IMAGES=$DMS_HOME/images
-export DMS_PROG=$DMS_HOME/prog
