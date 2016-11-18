@@ -6,4 +6,5 @@ echo "this script is used to launch  DMS Bash Profile"
 #set
 #echo "JAVA_HOME=$JAVA_HOME"
 #echo "PATH=$PATH"
-. ./dms_global.sh
+LOGIN_NAME=`whoami`
+. /$LOGIN_NAME/dms/config/dms_global.sh

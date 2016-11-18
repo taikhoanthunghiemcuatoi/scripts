@@ -32,6 +32,7 @@ mkdir -p $DMS_SCRIPTS
 mkdir -p $DMS_LOG
 mkdir -p $DMS_UPLOAD
 mkdir -p $DMS_IMAGES
+mkdir -p $DMS_PROG
 echo "created"
 
 echo "will change mode and owner of the dir $DMS_HOME and its subdirs"

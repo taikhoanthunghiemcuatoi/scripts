@@ -16,17 +16,24 @@ fi
 if [ ! -f $DMS_HOME/.bash_profile ]
 then
         cp .bash_profile $DMS_HOME
-	chown $USER_NAME $DMS_HOME/.bash_profile
         echo "copied .bash_profile to $DMS_HOME"
-	printf "\n. ~/.dms_bash_profile" >> $DMS_HOME/.bash_profile
+fi
+
+chown $USER_NAME $DMS_HOME/.bash_profile
+chmod u+x $DMS_HOME/.bash_profile
+if [ -z "`grep 'dms_bash_profile' $DMS_HOME/.bash_profile`" ]
+then
+	printf "\n. $DMS_HOME/.dms_bash_profile\n" >> $DMS_HOME/.bash_profile
 fi
 
 cp .dms_bash_profile $DMS_HOME
 chown $USER_NAME $DMS_HOME/.dms_bash_profile
+chmod u+x $DMS_HOME/.dms_bash_profile
 echo "copied .dms_bash_profile to $DMS_HOME"
 
-cp dms_global.sh $DMS_HOME
-chown $USER_NAME $DMS_HOME/dms_global.sh
-echo "copied dms_global.sh to $DMS_HOME"
+cp dms_global.sh $DMS_CONFIG
+chown $USER_NAME $DMS_CONFIG/dms_global.sh
+chmod u+x $DMS_CONFIG/dms_global.sh
+echo "copied dms_global.sh to $DMS_CONFIG"
 
 echo "DMS Setup is done!. please exit the terminal and re-open again to get effect!"
