@@ -11,7 +11,14 @@ then
 fi
 
 . ./dms_global.sh $USER_NAME
-. ./dms_user_add.sh $USER_NAME
+
+unamestr=`uname`
+
+if [ "$unamestr" == "Linux" ]; then
+	. ./dms_user_add.sh $USER_NAME
+elif [ "$unamestr" == "Darwin" ]; then
+	. ./dms_user_add_osx.sh $USER_NAME
+fi
 
 if [ ! -f $DMS_HOME/.bash_profile ]
 then
